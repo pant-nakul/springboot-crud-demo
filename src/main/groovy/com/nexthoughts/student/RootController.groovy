@@ -20,8 +20,7 @@ import org.springframework.web.servlet.view.RedirectView
 class RootController {
     @Autowired
     StudentRepository studentRepository
-    
-    
+
     @RequestMapping(method=RequestMethod.GET)
     public def getAll() {
         def students=studentRepository.findAll()

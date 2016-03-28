@@ -1,11 +1,11 @@
 layout 'layouts/main.tpl',
     pageTitle: 'Spring Boot - Groovy templates example with layout',
     mainBody: contents {
-    div(class:"panel panel-default"){
+    div(class:"panel panel-default col-md-offset-2 col-md-8 col-md-offset-2"){
       
       div(class:"panel-heading"){
-      strong{yield 'Students'}
-      a(class:"btn btn-sm btn-info pull-right",href:"/student/create","Add Student")
+      strong{yield 'Students List'}
+      a(class:"btn  btn-info col-md-offset-9",href:"/student/create","Add Student")
       }
       div(class:"panel-body"){
 
