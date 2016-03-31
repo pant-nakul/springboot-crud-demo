@@ -24,7 +24,7 @@ idea {
 }
 
 jar {
-	baseName = 'feedback'
+	baseName = 'springboot-demo'
 	version = '0.0.1-SNAPSHOT'
 }
 sourceCompatibility = 1.7
@@ -44,7 +44,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-groovy-templates')
 	compile('org.springframework.boot:spring-boot-starter-mail')
 	compile('org.springframework.boot:spring-boot-starter-remote-shell')
-//	compile('org.springframework.boot:spring-boot-starter-security')
+	compile('org.springframework.boot:spring-boot-starter-security')
     compile("org.springframework.boot:spring-boot-devtools")
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.codehaus.groovy:groovy')
