@@ -1,17 +1,38 @@
 layout 'layouts/main.tpl',
-    pageTitle: 'Spring Boot - Groovy templates example with layout',
-    mainBody: contents {
-      div(class:"col-md-offset-2 col-md-6 col-md-offset-2"){
-      div(class:"col-md-4"){
-                    label(class:'modal-header',for:'studentId'){yield 'Id'}
-                    input(class:"form-control",type:'textfield',id:'studentId',name:'studentId',readonly:true,"${studentInstance.id}")
-                    label(class:'modal-header',for:'studentName'){yield 'Name'}
-                    input(class:"form-control",type:'textfield',id:'studentName',name:'studentName',readonly:true,"${studentInstance.name}")
+        pageTitle: 'Spring Boot - Groovy templates example with layout',
+        mainBody: contents {
+            div(class: 'row') {
+                div(class: 'col-md-offset-3 col-md-6') {
+                    table(class: "table table-bordered") {
+                        tr {
+                            th(class: 'col-md-2') {
+                                yield "ID"
+                            }
 
-      }
-    }
+                            th(class: 'col-md-2') {
+                                yield "Name"
+                            }
+                        }
+                        tr {
+                            td(class: 'col-md-2') {
+                                yield "$studentInstance.id"
+                            }
+                            td(class: 'col-md-2') {
+                                yield "$studentInstance.name"
+                            }
+                        }
+                    }
+                }
 
-}
+            }
+            div(class: row) {
+                div(class: 'col-md-offset-5 col-md-3') {
+                    a(class: 'btn btn-info', href: '/student/', "Back")
+                    a(class: "btn btn-small btn-info", href: "/student/edit/${studentInstance.id}", "Edit")
+                    a(class: "btn btn-small btn-info", href: "/student/deleteOne/${studentInstance.id}", "Delete")
+                }
+            }
+        }
 
 
 

@@ -37,8 +37,6 @@ class RootController {
 
     @RequestMapping(method=RequestMethod.POST)
     public def create(@ModelAttribute Student student) {
-        println "======Inside create method========="
-        println "=======$student.properties======="
        Student student1= studentRepository.saveAndFlush(student)
         if(student){
             return new ModelAndView(new RedirectView("/student"))
@@ -58,9 +56,6 @@ class RootController {
 
     @RequestMapping(method=RequestMethod.POST, value="{id}")
     public def update(@PathVariable String id, @ModelAttribute Student student) {
-        println "======Inside update method==========="
-        println "===ID === $id==="
-        println "=======$student.properties"
         Student student1=studentRepository.findOne(Long.parseLong(id))
         student1.name=student.name
         if(studentRepository.save(student1)){
