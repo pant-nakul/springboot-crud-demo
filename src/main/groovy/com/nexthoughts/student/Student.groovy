@@ -7,7 +7,6 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 
 @Entity
-
 class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

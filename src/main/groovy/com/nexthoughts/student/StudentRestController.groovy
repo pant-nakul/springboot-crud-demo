@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.RedirectView
 
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping(value = '/rest')
-class RestController {
+class StudentRestController {
     @Autowired
     StudentRepository studentRepository
 
@@ -34,8 +34,9 @@ class RestController {
     }
 
     @RequestMapping(method=RequestMethod.POST)
-    public Student create(@RequestBody Student student) {
-        return studentRepository.saveAndFlush(student)
+    public def create(@RequestBody Student student) {
+        def studentCreated= studentRepository.saveAndFlush(student)
+        studentCreated
     }
 
     @RequestMapping(method=RequestMethod.DELETE, value="{id}")

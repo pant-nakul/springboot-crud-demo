@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-class FeedbackApplication {
+class SpringBootDemoApplication {
 
 	static void main(String[] args) {
-		SpringApplication.run FeedbackApplication, args
+		SpringApplication.run SpringBootDemoApplication, args
 	}
 }

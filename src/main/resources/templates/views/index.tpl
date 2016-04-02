@@ -31,7 +31,6 @@ layout 'layouts/main.tpl',
                             tr {
                                 td {
                                     a(href: "/student/${student.id}", "$student.id")
-
                                 }
                                 td {
                                     yield "$student.name"
